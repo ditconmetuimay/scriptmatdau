@@ -1,0 +1,12 @@
+local char = script.Parent
+
+char.Humanoid.Died:Connect(function()
+while wait() do
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if (v:IsA("Decal")) then
+v:Destroy()
+end
+end
+end
+end)
